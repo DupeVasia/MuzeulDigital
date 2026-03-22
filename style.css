@@ -1,0 +1,387 @@
+/* Resetare de bază */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fdfaf6; /* Culoare de fundal tip pergament */
+  scrollbar-gutter: stable;
+}
+
+/* Navigație */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.logo:hover {
+  color: #8b4513;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 20px;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #8b4513; /* Accent maroniu */
+}
+
+/* Hero Section */
+.hero {
+  height: 50vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3")
+      no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.btn {
+  padding: 12px 30px;
+  background: #8b4513;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #5d2e0d;
+}
+
+/* Secțiuni */
+.container {
+  padding: 80px 10%;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.text-box {
+  text-align: center;
+}
+
+/* Stiluri noi pentru STEAM și Video */
+.steam-section {
+  background-color: #f4f1ea;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  scroll-margin-top: 110px;
+}
+
+.steam-content p {
+  font-size: 1.1rem;
+  text-align: justify;
+  margin-bottom: 25px;
+}
+
+.quote-central blockquote {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  text-align: center;
+  color: #8b4513;
+  border-left: 5px solid #8b4513;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.video-player {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.play-button {
+  width: 80px;
+  height: 80px;
+  background-color: #8b4513;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 15px;
+  transition: transform 0.2s;
+}
+
+.play-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 15px 0 15px 25px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.video-player:hover .play-button {
+  transform: scale(1.1);
+}
+
+#video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Stiluri pentru biografie */
+.biography-hero {
+  height: 60vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=1473")
+      no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.biography-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.biography-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.biography-image .caption {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.biography-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.biography-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.biography-text h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  margin: 30px 0 15px;
+  color: #8b4513;
+}
+
+.biography-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.biography-text ul li {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  border-left: 3px solid #8b4513;
+  padding-left: 15px;
+}
+
+.biography-text ul li strong {
+  color: #8b4513;
+}
+
+.sources-note {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-style: italic;
+}
+
+/* Personaje */
+.characters-section {
+  background: #f4f1ea;
+  padding: 80px 10%;
+}
+
+.character-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+}
+
+.card h3 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 15px;
+  color: #8b4513;
+}
+
+.section-subtitle {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 50px 0 30px;
+  color: #8b4513;
+}
+
+/* Citate */
+.quotes-section {
+  padding: 100px 10%;
+  background: #222;
+  color: #fff;
+  text-align: center;
+}
+
+blockquote {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #fff;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-grid,
+  .character-cards {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+/* Stiluri pentru animația de Reveal */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efect de hover pe carduri (Bonus) */
+.card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(139, 69, 19, 0.2);
+}
