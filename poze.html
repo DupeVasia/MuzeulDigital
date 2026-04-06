@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMG Gallery</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image Gallery</h1>
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+      // Add image filenames that start with "IMG"
+      const images = [
+        "IMG_7484.JPG",
+        "IMG_7485.JPG",
+        "IMG_7486.JPG",
+        "IMG_7487.JPG",
+        "IMG_7488.JPG",
+        "IMG_7490.JPG",
+        "IMG_7491.JPG",
+        "IMG_7492.JPG",
+        "IMG_7493.JPG",
+        "IMG_7494.JPG",
+        "IMG_7495.JPG",
+        "IMG_7496.JPG",
+        "IMG_7497.JPG",
+        "IMG_7498.JPG",
+        "IMG_7499.JPG",
+        "IMG_7500.JPG",
+        "IMG_7501.JPG",
+        "IMG_7502.JPG",
+        "IMG_7503.JPG",
+        "IMG_7504.JPG",
+        "IMG_7505.JPG",
+        "IMG_7506.JPG",
+        "IMG_7507.JPG",
+        "IMG_7508.JPG",
+        "IMG_7509.JPG",
+        "IMG_7510.JPG",
+      ];
+
+      const gallery = document.getElementById("gallery");
+      images.forEach((img) => {
+        const imgElement = document.createElement("img");
+        imgElement.src = img;
+        imgElement.alt = img;
+        gallery.appendChild(imgElement);
+      });
+    </script>
+  </body>
+</html>
